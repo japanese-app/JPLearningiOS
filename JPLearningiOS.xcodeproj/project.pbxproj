@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF4B52D02BF9F053007BDBFD /* JPLearningiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B52CF2BF9F053007BDBFD /* JPLearningiOSApp.swift */; };
+		CF4B52D22BF9F053007BDBFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B52D12BF9F053007BDBFD /* ContentView.swift */; };
+		CF4B52D42BF9F054007BDBFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4B52D32BF9F054007BDBFD /* Assets.xcassets */; };
+		CF4B52D72BF9F054007BDBFD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4B52D62BF9F054007BDBFD /* Preview Assets.xcassets */; };
+		CF4B52E12BF9F057007BDBFD /* JPLearningiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B52E02BF9F057007BDBFD /* JPLearningiOSTests.swift */; };
+		CF4B52EB2BF9F057007BDBFD /* JPLearningiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B52EA2BF9F057007BDBFD /* JPLearningiOSUITests.swift */; };
+		CF4B52ED2BF9F057007BDBFD /* JPLearningiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B52EC2BF9F057007BDBFD /* JPLearningiOSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF4B52DD2BF9F057007BDBFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF4B52C42BF9F053007BDBFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF4B52CB2BF9F053007BDBFD;
+			remoteInfo = JPLearningiOS;
+		};
+		CF4B52E72BF9F057007BDBFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF4B52C42BF9F053007BDBFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF4B52CB2BF9F053007BDBFD;
+			remoteInfo = JPLearningiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF4B52CC2BF9F053007BDBFD /* JPLearningiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPLearningiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF4B52CF2BF9F053007BDBFD /* JPLearningiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPLearningiOSApp.swift; sourceTree = "<group>"; };
+		CF4B52D12BF9F053007BDBFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CF4B52D32BF9F054007BDBFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF4B52D62BF9F054007BDBFD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF4B52DC2BF9F057007BDBFD /* JPLearningiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPLearningiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF4B52E02BF9F057007BDBFD /* JPLearningiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPLearningiOSTests.swift; sourceTree = "<group>"; };
+		CF4B52E62BF9F057007BDBFD /* JPLearningiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPLearningiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF4B52EA2BF9F057007BDBFD /* JPLearningiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPLearningiOSUITests.swift; sourceTree = "<group>"; };
+		CF4B52EC2BF9F057007BDBFD /* JPLearningiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPLearningiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF4B52C92BF9F053007BDBFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF4B52D92BF9F057007BDBFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF4B52E32BF9F057007BDBFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF4B52C32BF9F053007BDBFD = {
+			isa = PBXGroup;
+			children = (
+				CF4B52CE2BF9F053007BDBFD /* JPLearningiOS */,
+				CF4B52DF2BF9F057007BDBFD /* JPLearningiOSTests */,
+				CF4B52E92BF9F057007BDBFD /* JPLearningiOSUITests */,
+				CF4B52CD2BF9F053007BDBFD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF4B52CD2BF9F053007BDBFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF4B52CC2BF9F053007BDBFD /* JPLearningiOS.app */,
+				CF4B52DC2BF9F057007BDBFD /* JPLearningiOSTests.xctest */,
+				CF4B52E62BF9F057007BDBFD /* JPLearningiOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF4B52CE2BF9F053007BDBFD /* JPLearningiOS */ = {
+			isa = PBXGroup;
+			children = (
+				CF4B52CF2BF9F053007BDBFD /* JPLearningiOSApp.swift */,
+				CF4B52D12BF9F053007BDBFD /* ContentView.swift */,
+				CF4B52D32BF9F054007BDBFD /* Assets.xcassets */,
+				CF4B52D52BF9F054007BDBFD /* Preview Content */,
+			);
+			path = JPLearningiOS;
+			sourceTree = "<group>";
+		};
+		CF4B52D52BF9F054007BDBFD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CF4B52D62BF9F054007BDBFD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CF4B52DF2BF9F057007BDBFD /* JPLearningiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF4B52E02BF9F057007BDBFD /* JPLearningiOSTests.swift */,
+			);
+			path = JPLearningiOSTests;
+			sourceTree = "<group>";
+		};
+		CF4B52E92BF9F057007BDBFD /* JPLearningiOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF4B52EA2BF9F057007BDBFD /* JPLearningiOSUITests.swift */,
+				CF4B52EC2BF9F057007BDBFD /* JPLearningiOSUITestsLaunchTests.swift */,
+			);
+			path = JPLearningiOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF4B52CB2BF9F053007BDBFD /* JPLearningiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF4B52F02BF9F057007BDBFD /* Build configuration list for PBXNativeTarget "JPLearningiOS" */;
+			buildPhases = (
+				CF4B52C82BF9F053007BDBFD /* Sources */,
+				CF4B52C92BF9F053007BDBFD /* Frameworks */,
+				CF4B52CA2BF9F053007BDBFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JPLearningiOS;
+			productName = JPLearningiOS;
+			productReference = CF4B52CC2BF9F053007BDBFD /* JPLearningiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF4B52DB2BF9F057007BDBFD /* JPLearningiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF4B52F32BF9F057007BDBFD /* Build configuration list for PBXNativeTarget "JPLearningiOSTests" */;
+			buildPhases = (
+				CF4B52D82BF9F057007BDBFD /* Sources */,
+				CF4B52D92BF9F057007BDBFD /* Frameworks */,
+				CF4B52DA2BF9F057007BDBFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF4B52DE2BF9F057007BDBFD /* PBXTargetDependency */,
+			);
+			name = JPLearningiOSTests;
+			productName = JPLearningiOSTests;
+			productReference = CF4B52DC2BF9F057007BDBFD /* JPLearningiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF4B52E52BF9F057007BDBFD /* JPLearningiOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF4B52F62BF9F057007BDBFD /* Build configuration list for PBXNativeTarget "JPLearningiOSUITests" */;
+			buildPhases = (
+				CF4B52E22BF9F057007BDBFD /* Sources */,
+				CF4B52E32BF9F057007BDBFD /* Frameworks */,
+				CF4B52E42BF9F057007BDBFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF4B52E82BF9F057007BDBFD /* PBXTargetDependency */,
+			);
+			name = JPLearningiOSUITests;
+			productName = JPLearningiOSUITests;
+			productReference = CF4B52E62BF9F057007BDBFD /* JPLearningiOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF4B52C42BF9F053007BDBFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					CF4B52CB2BF9F053007BDBFD = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					CF4B52DB2BF9F057007BDBFD = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = CF4B52CB2BF9F053007BDBFD;
+					};
+					CF4B52E52BF9F057007BDBFD = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = CF4B52CB2BF9F053007BDBFD;
+					};
+				};
+			};
+			buildConfigurationList = CF4B52C72BF9F053007BDBFD /* Build configuration list for PBXProject "JPLearningiOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF4B52C32BF9F053007BDBFD;
+			productRefGroup = CF4B52CD2BF9F053007BDBFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF4B52CB2BF9F053007BDBFD /* JPLearningiOS */,
+				CF4B52DB2BF9F057007BDBFD /* JPLearningiOSTests */,
+				CF4B52E52BF9F057007BDBFD /* JPLearningiOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF4B52CA2BF9F053007BDBFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF4B52D72BF9F054007BDBFD /* Preview Assets.xcassets in Resources */,
+				CF4B52D42BF9F054007BDBFD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF4B52DA2BF9F057007BDBFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF4B52E42BF9F057007BDBFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF4B52C82BF9F053007BDBFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF4B52D22BF9F053007BDBFD /* ContentView.swift in Sources */,
+				CF4B52D02BF9F053007BDBFD /* JPLearningiOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF4B52D82BF9F057007BDBFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF4B52E12BF9F057007BDBFD /* JPLearningiOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF4B52E22BF9F057007BDBFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF4B52ED2BF9F057007BDBFD /* JPLearningiOSUITestsLaunchTests.swift in Sources */,
+				CF4B52EB2BF9F057007BDBFD /* JPLearningiOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF4B52DE2BF9F057007BDBFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF4B52CB2BF9F053007BDBFD /* JPLearningiOS */;
+			targetProxy = CF4B52DD2BF9F057007BDBFD /* PBXContainerItemProxy */;
+		};
+		CF4B52E82BF9F057007BDBFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF4B52CB2BF9F053007BDBFD /* JPLearningiOS */;
+			targetProxy = CF4B52E72BF9F057007BDBFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CF4B52EE2BF9F057007BDBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF4B52EF2BF9F057007BDBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF4B52F12BF9F057007BDBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"JPLearningiOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.japanese-app.JPLearningiOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF4B52F22BF9F057007BDBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"JPLearningiOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.japanese-app.JPLearningiOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF4B52F42BF9F057007BDBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.japanese-app.JPLearningiOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JPLearningiOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JPLearningiOS";
+			};
+			name = Debug;
+		};
+		CF4B52F52BF9F057007BDBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.japanese-app.JPLearningiOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JPLearningiOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JPLearningiOS";
+			};
+			name = Release;
+		};
+		CF4B52F72BF9F057007BDBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.japanese-app.JPLearningiOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JPLearningiOS;
+			};
+			name = Debug;
+		};
+		CF4B52F82BF9F057007BDBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.japanese-app.JPLearningiOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JPLearningiOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF4B52C72BF9F053007BDBFD /* Build configuration list for PBXProject "JPLearningiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF4B52EE2BF9F057007BDBFD /* Debug */,
+				CF4B52EF2BF9F057007BDBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF4B52F02BF9F057007BDBFD /* Build configuration list for PBXNativeTarget "JPLearningiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF4B52F12BF9F057007BDBFD /* Debug */,
+				CF4B52F22BF9F057007BDBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF4B52F32BF9F057007BDBFD /* Build configuration list for PBXNativeTarget "JPLearningiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF4B52F42BF9F057007BDBFD /* Debug */,
+				CF4B52F52BF9F057007BDBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF4B52F62BF9F057007BDBFD /* Build configuration list for PBXNativeTarget "JPLearningiOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF4B52F72BF9F057007BDBFD /* Debug */,
+				CF4B52F82BF9F057007BDBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF4B52C42BF9F053007BDBFD /* Project object */;
+}
