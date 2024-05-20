@@ -9,25 +9,25 @@ import SwiftUI
 
 struct RootView: View {
     @State var selectedTab: Tabs = .browse
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
     var body: some View {
-        NavigationView {
-            VStack {
-                TabView(selection: $selectedTab) {
-                    BrowseView()
-                        .tag(Tabs.browse)
-                    MylistView()
-                        .tag(Tabs.mylist)
-                    LearningView()
-                        .tag(Tabs.learning)
-                    MediaView()
-                        .tag(Tabs.media)
-                    JournalView()
-                        .tag(Tabs.journal)
-                }
-                
-                CustomTabBar(selectedTab: $selectedTab)
+        VStack(spacing: 0) {
+            TabView(selection: $selectedTab) {
+                BrowseView()
+                    .tag(Tabs.browse)
+                MylistView()
+                    .tag(Tabs.mylist)
+                LearningView()
+                    .tag(Tabs.learning)
+                MediaView()
+                    .tag(Tabs.media)
+                JournalView()
+                    .tag(Tabs.journal)
             }
-            .navigationBarHidden(true)
+            
+            CustomTabBar(selectedTab: $selectedTab)
         }
     }
 }
