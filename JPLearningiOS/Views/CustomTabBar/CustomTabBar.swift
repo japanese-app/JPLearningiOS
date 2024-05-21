@@ -20,7 +20,7 @@ struct CustomTabBar: View {
                 ForEach(Tabs.allCases, id: \.self) { tab in
                     TabButton(tab: tab, selectedTab: $selectedTab)
                 }
-            }.frame(height: 60)
+            }.frame(height: 55)
         }
         
     }

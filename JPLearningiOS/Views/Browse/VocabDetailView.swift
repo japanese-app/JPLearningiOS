@@ -12,9 +12,14 @@ struct VocabDetailView: View {
 
     var body: some View {
         VStack {
-            Text("This is the destination view")
-                .font(.largeTitle)
-                .padding()
+            Rectangle()
+                .fill(Color("light-grey"))
+                .frame(height: 1)
+            ScrollView {
+                VStack(spacing: 15) {
+                    Text("hi")
+                }
+            }.padding(.horizontal, 30)
             Spacer()
             VocabMenuBar()
         }
@@ -30,6 +35,7 @@ struct VocabDetailView: View {
                         Text("Browse")
                             .font(.system(size: 16))
                     }
+                    .padding(.leading, 10)
                 }
             }
             ToolbarItem(placement: .principal) {
@@ -56,6 +62,7 @@ struct VocabDetailView: View {
                     // Action for the additional icon
                 }) {
                     Image("SettingsIcon")
+                        .padding(.trailing, 15)
                 }
             }
         }
@@ -64,7 +71,42 @@ struct VocabDetailView: View {
 
 struct VocabMenuBar: View {
     var body: some View {
-        Text("example")
+        VStack {
+            Rectangle()
+                .fill(Color("light-grey"))
+                .frame(height: 1)
+            HStack(alignment: .center, spacing: 15) {
+                Image("FavoriteIcon")
+                    .frame(width: 34, height: 34)
+                Text("Review")
+                    .font(.system(size: 14))
+                    .padding(.vertical, 6)
+                    .padding(.horizontal, 10)
+                    .background(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(Color("icon-primary"))
+                    )
+                Text("Furigana")
+                    .font(.system(size: 14))
+                    .padding(.vertical, 6)
+                    .padding(.horizontal, 10)
+                    .background(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(Color("icon-primary"))
+                    )
+                Image("NoteIcon")
+                    .frame(width: 34, height: 34)
+                HStack {
+                    Image(systemName: "arrow.left")
+                        .font(.system(size: 18))
+                        .fontWeight(.light)
+                    Image(systemName: "arrow.right")
+                        .font(.system(size: 18))
+                        .fontWeight(.light)
+                }
+            }.frame(height: 55)
+        }
+        
     }
 }
 
