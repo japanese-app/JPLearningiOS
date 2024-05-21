@@ -9,9 +9,12 @@ import SwiftUI
 
 struct RootView: View {
     @State var selectedTab: Tabs = .browse
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 0) {
                 TabView(selection: $selectedTab) {
                     BrowseView()
                         .tag(Tabs.browse)
