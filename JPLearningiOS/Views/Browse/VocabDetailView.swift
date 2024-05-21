@@ -15,15 +15,17 @@ struct VocabDetailView: View {
             Text("This is the destination view")
                 .font(.largeTitle)
                 .padding()
+            Spacer()
+            VocabMenuBar()
         }
-        .navigationBarBackButtonHidden(true) // Hide the default back button
+        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: {
                     dismiss()
                 }) {
                     HStack {
-                        Image(systemName: "chevron.left") // Custom back button image
+                        Image(systemName: "chevron.left")
                             .font(.system(size: 14))
                         Text("Browse")
                             .font(.system(size: 16))
@@ -57,6 +59,12 @@ struct VocabDetailView: View {
                 }
             }
         }
+    }
+}
+
+struct VocabMenuBar: View {
+    var body: some View {
+        Text("example")
     }
 }
 

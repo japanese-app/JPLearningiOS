@@ -24,7 +24,7 @@ struct RootView: View {
                     JournalView()
                         .tag(Tabs.journal)
                 }
-                
+
                 CustomTabBar(selectedTab: $selectedTab)
             }
             .navigationBarHidden(true)
