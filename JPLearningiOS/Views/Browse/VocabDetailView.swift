@@ -78,41 +78,86 @@ struct VocabDetailView: View {
 }
 
 struct VocabMenuBar: View {
+    @State private var isFavorite: Bool = false
+    @State private var isReview: Bool = false
+    @State private var isFurigana: Bool = false
+    @State private var hasNote: Bool = false
+    
     var body: some View {
         VStack {
             Rectangle()
                 .fill(Color("light-grey"))
                 .frame(height: 1)
             HStack(alignment: .center, spacing: 15) {
-                Image("FavoriteIcon")
-                    .frame(width: 34, height: 34)
-                Text("Review")
-                    .font(.system(size: 14))
-                    .padding(.vertical, 6)
-                    .padding(.horizontal, 10)
-                    .background(
-                        RoundedRectangle(cornerRadius: 6)
-                            .stroke(Color("icon-primary"))
-                    )
-                Text("Furigana")
-                    .font(.system(size: 14))
-                    .padding(.vertical, 6)
-                    .padding(.horizontal, 10)
-                    .background(
-                        RoundedRectangle(cornerRadius: 6)
-                            .stroke(Color("icon-primary"))
-                    )
-                Image("NoteIcon")
-                    .frame(width: 34, height: 34)
-                HStack {
-                    Image(systemName: "arrow.left")
-                        .font(.system(size: 18))
-                        .fontWeight(.light)
-                    Image(systemName: "arrow.right")
-                        .font(.system(size: 18))
-                        .fontWeight(.light)
+                Button(action: {
+                    // Action for FavoriteIcon button
+                    isFavorite.toggle()
+                }) {
+                    Image(isFavorite ? "FavoriteSelectedIcon" : "FavoriteIcon")
+                        .frame(width: 34, height: 34)
                 }
-            }.frame(height: 55)
+
+                Button(action: {
+                    // Action for Review button
+                    isReview.toggle()
+                }) {
+                    Text("Review")
+                        .font(.system(size: 14))
+                        .foregroundColor(isReview ? Color("primary-purple") : .primary)
+                        .padding(.vertical, 6)
+                        .padding(.horizontal, 10)
+                        .background(
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke(isReview ? Color("primary-purple") : Color("icon-primary"), lineWidth: 0.8)
+                                .fill(isReview ? Color("primary-purple").opacity(0.06) : .clear)
+                        )
+                }
+
+                Button(action: {
+                    // Action for Furigana button
+                    isFurigana.toggle()
+                }) {
+                    Text("Furigana")
+                        .font(.system(size: 14))
+                        .foregroundColor(isFurigana ? Color("primary-purple") : .primary)
+                        .padding(.vertical, 6)
+                        .padding(.horizontal, 10)
+                        .background(
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke(isFurigana ? Color("primary-purple") : Color("icon-primary"), lineWidth: 0.8)
+                                .fill(isFurigana ? Color("primary-purple").opacity(0.06) : .clear)
+                        )
+                }
+
+                Button(action: {
+                    // Action for NoteIcon button
+                    hasNote.toggle()
+                }) {
+                    Image(hasNote ? "NoteIcon" : "NoteAddedIcon")
+                        .frame(width: 34, height: 34)
+                }.padding(0)
+
+                HStack (spacing: 10) {
+                    Button(action: {
+                        // Action for left arrow button
+                    }) {
+                        Image(systemName: "arrow.left")
+                            .font(.system(size: 18))
+                            .fontWeight(.light)
+                            .foregroundColor(Color("primary-purple"))
+                    }
+
+                    Button(action: {
+                        // Action for right arrow button
+                    }) {
+                        Image(systemName: "arrow.right")
+                            .font(.system(size: 18))
+                            .fontWeight(.light)
+                            .foregroundColor(Color("primary-purple"))
+                    }
+                }
+            }
+            .frame(height: 55)
         }
         
     }
