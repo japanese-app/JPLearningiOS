@@ -67,7 +67,7 @@ struct VocabDetailView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    // Action for the additional icon
+                    // Action for Settings
                 }) {
                     Image("SettingsIcon")
                         .padding(.trailing, 15)
