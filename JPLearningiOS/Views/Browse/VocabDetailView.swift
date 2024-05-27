@@ -230,7 +230,7 @@ struct VocabExampleView: View {
             }.padding(.bottom, 10)
             HStack (alignment: .top) {
                 Image("SoundIcon")
-                Text("最近仕事が忙しくて全然飲めてないから、今日仕事が終わった後、河原町あたりで飲も。")
+                Text("3回ぐらい台湾に行ったことあるけど、何回行っても飽きんし毎回また戻って来たいって思うんよな。")
                     .font(.system(size: 17))
             }
             Text("Recently, I've been so busy with work that I haven't been able to drink at all, so let's grab a drink around Kawaramachi after work today.")
