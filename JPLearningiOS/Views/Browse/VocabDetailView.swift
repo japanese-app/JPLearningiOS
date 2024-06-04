@@ -9,6 +9,7 @@ import SwiftUI
 
 struct VocabDetailView: View {
     @Environment(\.dismiss) private var dismiss
+    @State private var showSettings = false
 
     var body: some View {
         VStack (spacing: 0) {
@@ -67,10 +68,15 @@ struct VocabDetailView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    // Action for Settings
+                    showSettings.toggle()
                 }) {
                     Image("SettingsIcon")
-                        .padding(.trailing, 15)
+                        .padding(.trailing, 10)
+                }
+                .sheet(isPresented: $showSettings) {
+                    SettingsView(showSettings: $showSettings, showDisplaySetting: false)
+                        .presentationDetents([.fraction(0.15)])
+                        .presentationDragIndicator(.hidden)
                 }
             }
         }
@@ -80,7 +86,7 @@ struct VocabDetailView: View {
 struct VocabMenuBar: View {
     @State private var isFavorite: Bool = false
     @State private var isReview: Bool = false
-    @State private var isFurigana: Bool = false
+    @AppStorage("showFurigana") var showFurigana: Bool = false
     @State private var hasNote: Bool = false
     
     var body: some View {
@@ -115,17 +121,17 @@ struct VocabMenuBar: View {
 
                 Button(action: {
                     // Action for Furigana button
-                    isFurigana.toggle()
+                    showFurigana.toggle()
                 }) {
                     Text("Furigana")
                         .font(.system(size: 14))
-                        .foregroundColor(isFurigana ? Color("primary-purple") : .primary)
+                        .foregroundColor(showFurigana ? Color("primary-purple") : .primary)
                         .padding(.vertical, 6)
                         .padding(.horizontal, 10)
                         .background(
                             RoundedRectangle(cornerRadius: 6)
-                                .stroke(isFurigana ? Color("primary-purple") : Color("icon-primary"), lineWidth: 0.8)
-                                .fill(isFurigana ? Color("primary-purple").opacity(0.06) : .clear)
+                                .stroke(showFurigana ? Color("primary-purple") : Color("icon-primary"), lineWidth: 0.8)
+                                .fill(showFurigana ? Color("primary-purple").opacity(0.06) : .clear)
                         )
                 }
 
