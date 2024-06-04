@@ -34,13 +34,17 @@ struct BrowseView: View {
                 }
             }.padding(.horizontal, 30)
             
-            ScrollView {
+            ScrollView (showsIndicators: false) {
                 VStack(spacing: 15) {
                     ForEach(1...20, id: \.self) { item in
                         VocabularyCard()
                     }
-                }.padding([.leading, .trailing], 6)
-            }.padding(.horizontal, 24)
+                }
+                .padding([.leading, .trailing], 6)
+                .padding(.bottom, 30)
+            }
+            .padding(.horizontal, 24)
+            
         }
     }
 }

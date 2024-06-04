@@ -9,8 +9,17 @@ import SwiftUI
 
 struct MediaView: View {
     var body: some View {
-        Text("Media Page")
-            .navigationTitle("Media")
+        VStack (alignment: .leading) {
+            HStack {
+                Text("Media")
+                    .font(.system(size: 28))
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            Spacer()
+        }
+        .frame(maxHeight: .infinity)
+        .padding(.horizontal, 30)
     }
 }
 

@@ -9,8 +9,17 @@ import SwiftUI
 
 struct LearningView: View {
     var body: some View {
-        Text("Learning Page")
-            .navigationTitle("Learning")
+        VStack (alignment: .leading) {
+            HStack {
+                Text("Learning")
+                    .font(.system(size: 28))
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            Spacer()
+        }
+        .frame(maxHeight: .infinity)
+        .padding(.horizontal, 30)
     }
 }
 

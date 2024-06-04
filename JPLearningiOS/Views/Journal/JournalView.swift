@@ -9,8 +9,17 @@ import SwiftUI
 
 struct JournalView: View {
     var body: some View {
-        Text("Journal Page")
-            .navigationTitle("Journal")
+        VStack (alignment: .leading) {
+            HStack {
+                Text("Journal")
+                    .font(.system(size: 28))
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            Spacer()
+        }
+        .frame(maxHeight: .infinity)
+        .padding(.horizontal, 30)
     }
 }
 

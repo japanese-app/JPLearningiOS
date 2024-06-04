@@ -9,8 +9,17 @@ import SwiftUI
 
 struct MylistView: View {
     var body: some View {
-        Text("My List Page")
-            .navigationTitle("My List")
+        VStack (alignment: .leading) {
+            HStack {
+                Text("Mylist")
+                    .font(.system(size: 28))
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            Spacer()
+        }
+        .frame(maxHeight: .infinity)
+        .padding(.horizontal, 30)
     }
 }
 

@@ -15,22 +15,39 @@ struct RootView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                TabView(selection: $selectedTab) {
+                if selectedTab != .account {
+                    HStack (spacing: 0) {
+                        Spacer()
+                        Button(action: {
+                            selectedTab = .account
+                        }) {
+                            Image("AccountIcon")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                        }
+                    }
+                    .padding(.horizontal, 30)
+                    .padding(.bottom, 5)
+                }
+                switch selectedTab {
+                case .browse:
                     BrowseView()
-                        .tag(Tabs.browse)
+                case .mylist:
                     MylistView()
-                        .tag(Tabs.mylist)
+                case .learning:
                     LearningView()
-                        .tag(Tabs.learning)
+                case .media:
                     MediaView()
-                        .tag(Tabs.media)
+                case .journal:
                     JournalView()
-                        .tag(Tabs.journal)
+                case .account:
+                    AccountView()
                 }
 
                 CustomTabBar(selectedTab: $selectedTab)
             }
             .navigationBarHidden(true)
+            
         }
     }
 }

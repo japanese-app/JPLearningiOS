@@ -9,7 +9,18 @@ import SwiftUI
 
 struct AccountView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack (alignment: .leading) {
+            HStack {
+                Text("Account")
+                    .font(.system(size: 28))
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            Spacer()
+        }
+        .frame(maxHeight: .infinity)
+        .padding(.horizontal, 30)
+        .padding(.top, 45)
     }
 }
 

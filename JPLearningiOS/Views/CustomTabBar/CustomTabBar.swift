@@ -17,10 +17,10 @@ struct CustomTabBar: View {
                 .fill(Color("light-grey"))
                 .frame(height: 1)
             HStack(alignment: .bottom, spacing: 25) {
-                ForEach(Tabs.allCases, id: \.self) { tab in
+                ForEach(Tabs.allCases.filter { $0 != .account }, id: \.self) { tab in
                     TabButton(tab: tab, selectedTab: $selectedTab)
                 }
-            }.frame(height: 55)
+            }
         }
         
     }
@@ -48,6 +48,7 @@ struct TabButton: View {
 }
 
 enum Tabs: Int, CaseIterable {
+    case account = 5
     case browse = 0
     case mylist = 1
     case learning = 2
@@ -61,6 +62,7 @@ enum Tabs: Int, CaseIterable {
         case .learning: return "LearningIcon"
         case .media: return "MediaIcon"
         case .journal: return "JournalIcon"
+        case .account: return ""
         }
     }
     
@@ -70,6 +72,7 @@ enum Tabs: Int, CaseIterable {
         case .mylist: return CGSize(width: 36, height: 36)
         case .learning: return CGSize(width: 32, height: 32)
         case .media, .journal: return CGSize(width: 30, height: 30)
+        case .account: return CGSize.zero
         }
     }
     
@@ -80,6 +83,7 @@ enum Tabs: Int, CaseIterable {
         case .learning: return "Learning"
         case .media: return "Media"
         case .journal: return "Journal"
+        case .account: return "Account"
         }
     }
 }
