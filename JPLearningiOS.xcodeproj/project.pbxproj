@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF2C824D2C19011600FA5BB7 /* IndividualVocabDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2C824C2C19011600FA5BB7 /* IndividualVocabDetailsView.swift */; };
+		CF2C824F2C1901BF00FA5BB7 /* IndividualVocabExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2C824E2C1901BF00FA5BB7 /* IndividualVocabExamplesView.swift */; };
 		CF4B52D02BF9F053007BDBFD /* JPLearningiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B52CF2BF9F053007BDBFD /* JPLearningiOSApp.swift */; };
 		CF4B52D42BF9F054007BDBFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4B52D32BF9F054007BDBFD /* Assets.xcassets */; };
 		CF4B52D72BF9F054007BDBFD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4B52D62BF9F054007BDBFD /* Preview Assets.xcassets */; };
 		CF4B52E12BF9F057007BDBFD /* JPLearningiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B52E02BF9F057007BDBFD /* JPLearningiOSTests.swift */; };
 		CF4B52EB2BF9F057007BDBFD /* JPLearningiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B52EA2BF9F057007BDBFD /* JPLearningiOSUITests.swift */; };
 		CF4B52ED2BF9F057007BDBFD /* JPLearningiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B52EC2BF9F057007BDBFD /* JPLearningiOSUITestsLaunchTests.swift */; };
-		CF4EB2762BFC57F90081C786 /* VocabDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4EB2752BFC57F90081C786 /* VocabDetailView.swift */; };
+		CF4EB2762BFC57F90081C786 /* IndividualVocabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4EB2752BFC57F90081C786 /* IndividualVocabView.swift */; };
 		CF4EB2782BFC6B9E0081C786 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4EB2772BFC6B9E0081C786 /* RootView.swift */; };
 		CF5F313B2C0EB8550069BB3C /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F313A2C0EB8550069BB3C /* AccountView.swift */; };
 		CFBD11A62BFACC3600DD779A /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBD11A52BFACC3600DD779A /* CustomTabBar.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF2C824C2C19011600FA5BB7 /* IndividualVocabDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualVocabDetailsView.swift; sourceTree = "<group>"; };
+		CF2C824E2C1901BF00FA5BB7 /* IndividualVocabExamplesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualVocabExamplesView.swift; sourceTree = "<group>"; };
 		CF4B52CC2BF9F053007BDBFD /* JPLearningiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPLearningiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4B52CF2BF9F053007BDBFD /* JPLearningiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPLearningiOSApp.swift; sourceTree = "<group>"; };
 		CF4B52D32BF9F054007BDBFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,7 +55,7 @@
 		CF4B52E62BF9F057007BDBFD /* JPLearningiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPLearningiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4B52EA2BF9F057007BDBFD /* JPLearningiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPLearningiOSUITests.swift; sourceTree = "<group>"; };
 		CF4B52EC2BF9F057007BDBFD /* JPLearningiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPLearningiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CF4EB2752BFC57F90081C786 /* VocabDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabDetailView.swift; sourceTree = "<group>"; };
+		CF4EB2752BFC57F90081C786 /* IndividualVocabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualVocabView.swift; sourceTree = "<group>"; };
 		CF4EB2772BFC6B9E0081C786 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		CF5F313A2C0EB8550069BB3C /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CFBD11A52BFACC3600DD779A /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
@@ -186,7 +190,9 @@
 			isa = PBXGroup;
 			children = (
 				CFBD11AC2BFAF0C500DD779A /* BrowseView.swift */,
-				CF4EB2752BFC57F90081C786 /* VocabDetailView.swift */,
+				CF4EB2752BFC57F90081C786 /* IndividualVocabView.swift */,
+				CF2C824C2C19011600FA5BB7 /* IndividualVocabDetailsView.swift */,
+				CF2C824E2C1901BF00FA5BB7 /* IndividualVocabExamplesView.swift */,
 			);
 			path = Browse;
 			sourceTree = "<group>";
@@ -362,7 +368,9 @@
 				CFBD11B32BFAF12600DD779A /* MediaView.swift in Sources */,
 				CFBD11B52BFAF14400DD779A /* JournalView.swift in Sources */,
 				CFBD11B12BFAF11600DD779A /* LearningView.swift in Sources */,
-				CF4EB2762BFC57F90081C786 /* VocabDetailView.swift in Sources */,
+				CF4EB2762BFC57F90081C786 /* IndividualVocabView.swift in Sources */,
+				CF2C824F2C1901BF00FA5BB7 /* IndividualVocabExamplesView.swift in Sources */,
+				CF2C824D2C19011600FA5BB7 /* IndividualVocabDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

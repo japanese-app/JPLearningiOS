@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct VocabDetailView: View {
+struct IndividualVocabView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showSettings = false
+    @State var displayOption: String = "Examples"
 
     var body: some View {
         VStack (spacing: 0) {
@@ -20,10 +21,13 @@ struct VocabDetailView: View {
             ScrollView (showsIndicators: false) {
                 VStack(spacing: 25) {
                     VocabMeaningView()
-                    VocabSpeechPicker()
-                    VocabExampleView()
-                    VocabContextView()
-                    VocabLearningView()
+                    VocabDisplayPicker(displayOption: $displayOption)
+                    if displayOption == "Details" {
+                        IndividualVocabDetailsView()
+                    } else {
+                        IndividualVocabExamplesView()
+                    }
+                    
                 }
                 .padding(.bottom, 20)
             }
@@ -193,13 +197,13 @@ struct VocabMeaningView: View {
     }
 }
 
-struct VocabSpeechPicker: View {
-    @State private var selection: String = "Casual"
+struct VocabDisplayPicker: View {
+    @Binding var displayOption: String
     
     var body: some View {
-        Picker("Select Speech Style", selection: $selection) {
-            Text("Casual").tag("Casual")
-            Text("Formal").tag("Formal")
+        Picker("Select Display", selection: $displayOption) {
+            Text("Details").tag("Details")
+            Text("Examples").tag("Examples")
         }
         .pickerStyle(SegmentedPickerStyle())
         .padding(.horizontal, 40)
@@ -245,42 +249,42 @@ struct VocabExampleView: View {
     }
 }
 
-struct VocabContextView: View {
-    var body: some View {
-        VStack (spacing: 8) {
-            HStack {
-                Text("CONTEXT")
-                    .foregroundColor(Color("primary-blue"))
-                    .font(.system(size: 15))
-                    .fontWeight(.bold)
-                Rectangle()
-                    .fill(Color("primary-blue"))
-                    .frame(height: 0.8)
-            }
-            Text("Lately, your work schedule has been incredibly demanding, leaving little room for leisure. Realizing it's been ages since you last caught up with your friend over a beer, you're craving that downtime and connection outside of work. So, you propose meeting up after work for a drink, maybe at a cozy spot around Kawaramachi.")
-                .font(.system(size: 14))
-        }
-    }
-}
-
-struct VocabLearningView: View {
-    var body: some View {
-        VStack (spacing: 8) {
-            HStack {
-                Text("LEARNING")
-                    .foregroundColor(Color("primary-blue"))
-                    .font(.system(size: 15))
-                    .fontWeight(.bold)
-                Rectangle()
-                    .fill(Color("primary-blue"))
-                    .frame(height: 0.8)
-            }
-            Text("Lately, your work schedule has been incredibly demanding, leaving little room for leisure. Realizing it's been ages since you last caught up with your friend over a beer, you're craving that downtime and connection outside of work. So, you propose meeting up after work for a drink, maybe at a cozy spot around Kawaramachi.")
-                .font(.system(size: 14))
-        }
-    }
-}
+//struct VocabContextView: View {
+//    var body: some View {
+//        VStack (spacing: 8) {
+//            HStack {
+//                Text("CONTEXT")
+//                    .foregroundColor(Color("primary-blue"))
+//                    .font(.system(size: 15))
+//                    .fontWeight(.bold)
+//                Rectangle()
+//                    .fill(Color("primary-blue"))
+//                    .frame(height: 0.8)
+//            }
+//            Text("Lately, your work schedule has been incredibly demanding, leaving little room for leisure. Realizing it's been ages since you last caught up with your friend over a beer, you're craving that downtime and connection outside of work. So, you propose meeting up after work for a drink, maybe at a cozy spot around Kawaramachi.")
+//                .font(.system(size: 14))
+//        }
+//    }
+//}
+//
+//struct VocabLearningView: View {
+//    var body: some View {
+//        VStack (spacing: 8) {
+//            HStack {
+//                Text("LEARNING")
+//                    .foregroundColor(Color("primary-blue"))
+//                    .font(.system(size: 15))
+//                    .fontWeight(.bold)
+//                Rectangle()
+//                    .fill(Color("primary-blue"))
+//                    .frame(height: 0.8)
+//            }
+//            Text("Lately, your work schedule has been incredibly demanding, leaving little room for leisure. Realizing it's been ages since you last caught up with your friend over a beer, you're craving that downtime and connection outside of work. So, you propose meeting up after work for a drink, maybe at a cozy spot around Kawaramachi.")
+//                .font(.system(size: 14))
+//        }
+//    }
+//}
 
 #Preview {
-    VocabDetailView()
+    IndividualVocabView()
 }

@@ -51,7 +51,7 @@ struct BrowseView: View {
 
 struct VocabularyCard: View {
     var body: some View {
-        NavigationLink(destination: VocabDetailView()) {
+        NavigationLink(destination: IndividualVocabView()) {
             HStack(spacing: 20) {
                 Text("001")
                     .foregroundColor(Color("primary-orange"))
