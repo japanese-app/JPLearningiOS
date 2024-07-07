@@ -10,7 +10,7 @@ import SwiftUI
 struct IndividualVocabView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showSettings = false
-    @State var displayOption: String = "Examples"
+    @State var displayOption: String = "Details"
 
     var body: some View {
         VStack (spacing: 0) {
@@ -190,9 +190,6 @@ struct VocabMeaningView: View {
             Text("We can say that we \"have done\" something by putting a verb into Vた plain past tense and adding ～ことがある to the end of it.")
                 .font(.system(size: 14))
                 .padding(.vertical, 15)
-            Rectangle()
-                .frame(height: 1)
-                .foregroundColor(Color("light-grey"))
         }
     }
 }
@@ -248,42 +245,6 @@ struct VocabExampleView: View {
         }
     }
 }
-
-//struct VocabContextView: View {
-//    var body: some View {
-//        VStack (spacing: 8) {
-//            HStack {
-//                Text("CONTEXT")
-//                    .foregroundColor(Color("primary-blue"))
-//                    .font(.system(size: 15))
-//                    .fontWeight(.bold)
-//                Rectangle()
-//                    .fill(Color("primary-blue"))
-//                    .frame(height: 0.8)
-//            }
-//            Text("Lately, your work schedule has been incredibly demanding, leaving little room for leisure. Realizing it's been ages since you last caught up with your friend over a beer, you're craving that downtime and connection outside of work. So, you propose meeting up after work for a drink, maybe at a cozy spot around Kawaramachi.")
-//                .font(.system(size: 14))
-//        }
-//    }
-//}
-//
-//struct VocabLearningView: View {
-//    var body: some View {
-//        VStack (spacing: 8) {
-//            HStack {
-//                Text("LEARNING")
-//                    .foregroundColor(Color("primary-blue"))
-//                    .font(.system(size: 15))
-//                    .fontWeight(.bold)
-//                Rectangle()
-//                    .fill(Color("primary-blue"))
-//                    .frame(height: 0.8)
-//            }
-//            Text("Lately, your work schedule has been incredibly demanding, leaving little room for leisure. Realizing it's been ages since you last caught up with your friend over a beer, you're craving that downtime and connection outside of work. So, you propose meeting up after work for a drink, maybe at a cozy spot around Kawaramachi.")
-//                .font(.system(size: 14))
-//        }
-//    }
-//}
 
 #Preview {
     IndividualVocabView()

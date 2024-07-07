@@ -200,7 +200,6 @@ struct AdditionalLearningPopup: View {
                             .font(.system(size: 15))
                         Text("Shohei Ohtani is undoubtedly a national treasure of Japan.")
                         .font(.system(size: 14))
-                        
                     }
                     .padding(10)
                     
