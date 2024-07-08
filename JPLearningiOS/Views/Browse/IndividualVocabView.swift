@@ -10,7 +10,7 @@ import SwiftUI
 struct IndividualVocabView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showSettings = false
-    @State var displayOption: String = "Details"
+    @State var displayOption: String = "Examples"
 
     var body: some View {
         VStack (spacing: 0) {
@@ -88,41 +88,34 @@ struct IndividualVocabView: View {
 }
 
 struct VocabMenuBar: View {
-    @State private var isFavorite: Bool = false
+    @State private var bookmarked: Bool = false
     @State private var isReview: Bool = false
+    @AppStorage("hideJapanese") var hide: Bool = false
     @AppStorage("showFurigana") var showFurigana: Bool = false
-    @State private var hasNote: Bool = false
+    @State private var showSettings = false
     
     var body: some View {
         VStack {
             Rectangle()
                 .fill(Color("light-grey"))
                 .frame(height: 1)
-            HStack(alignment: .center, spacing: 15) {
+            HStack(alignment: .center, spacing: 18) {
                 Button(action: {
                     // Action for FavoriteIcon button
-                    isFavorite.toggle()
+                    bookmarked.toggle()
                 }) {
-                    Image(isFavorite ? "FavoriteSelectedIcon" : "FavoriteIcon")
-                        .frame(width: 34, height: 34)
+                    Image(bookmarked ? "BookmarkFillIcon" : "BookmarkIcon")
+                        .resizable()
+                        .frame(width: 22, height: 28)
                 }
-
+                .padding(.horizontal, 4)
+                
                 Button(action: {
-                    // Action for Review button
-                    isReview.toggle()
+                    hide.toggle()
                 }) {
-                    Text("Review")
-                        .font(.system(size: 14))
-                        .foregroundColor(isReview ? Color("primary-purple") : .primary)
-                        .padding(.vertical, 6)
-                        .padding(.horizontal, 10)
-                        .background(
-                            RoundedRectangle(cornerRadius: 6)
-                                .stroke(isReview ? Color("primary-purple") : Color("icon-primary"), lineWidth: 0.8)
-                                .fill(isReview ? Color("primary-purple").opacity(0.06) : .clear)
-                        )
+                    Image(hide ? "ViewHideIcon" : "ViewIcon")
                 }
-
+                
                 Button(action: {
                     // Action for Furigana button
                     showFurigana.toggle()
@@ -130,7 +123,7 @@ struct VocabMenuBar: View {
                     Text("Furigana")
                         .font(.system(size: 14))
                         .foregroundColor(showFurigana ? Color("primary-purple") : .primary)
-                        .padding(.vertical, 6)
+                        .padding(.vertical, 4)
                         .padding(.horizontal, 10)
                         .background(
                             RoundedRectangle(cornerRadius: 6)
@@ -138,14 +131,19 @@ struct VocabMenuBar: View {
                                 .fill(showFurigana ? Color("primary-purple").opacity(0.06) : .clear)
                         )
                 }
-
+                
                 Button(action: {
-                    // Action for NoteIcon button
-                    hasNote.toggle()
+                    showSettings.toggle()
                 }) {
-                    Image(hasNote ? "NoteIcon" : "NoteAddedIcon")
-                        .frame(width: 34, height: 34)
-                }.padding(0)
+                    Image("MicIcon")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                }
+                .sheet(isPresented: $showSettings) {
+                    SettingsView(showSettings: $showSettings, showDisplaySetting: false)
+                        .presentationDetents([.fraction(0.15)])
+                        .presentationDragIndicator(.hidden)
+                }
 
                 HStack (spacing: 10) {
                     Button(action: {
@@ -189,7 +187,7 @@ struct VocabMeaningView: View {
                 .foregroundColor(Color("light-grey"))
             Text("We can say that we \"have done\" something by putting a verb into Vた plain past tense and adding ～ことがある to the end of it.")
                 .font(.system(size: 14))
-                .padding(.vertical, 15)
+                .padding(.top, 15)
         }
     }
 }

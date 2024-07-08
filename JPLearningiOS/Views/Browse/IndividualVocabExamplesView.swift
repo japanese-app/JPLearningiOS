@@ -47,14 +47,22 @@ struct VocabExamplesPicker: View {
 
 struct ExampleView: View {
     @Binding var exampleSelected: String
+    @AppStorage("hideJapanese") var hide: Bool = false
+    
     var body: some View {
         ZStack {
             Color("background-grey")
             
             VStack (alignment: .center, spacing: 20) {
                 VStack (alignment: .leading, spacing: 10) {
-                    Text("記憶がちょっと曖昧なんだけど、間違いなくこの店には来たことがある。")
-                        .font(.system(size: 15))
+                    ZStack {
+                        Text("記憶がちょっと曖昧なんだけど、間違いなくこの店には来たことがある。")
+                            .font(.system(size: 15))
+                        if hide {
+                            Color("background-grey")
+                            Image("ViewHideIcon")
+                        }
+                    }.fixedSize(horizontal: false, vertical: true)
                     
                     Text("My memory is a bit hazy, but I’m sure I’ve been to this restaurant before. ")
                         .font(.system(size: 14))
@@ -71,11 +79,11 @@ struct ExampleView: View {
                     }) {
                         Image("SoundIconBlack")
                     }
-                    Button(action: {
-                        // Action for Bookmark button
-                    }) {
-                        Image("BookmarkIcon")
-                    }
+//                    Button(action: {
+//                        // Action for Bookmark button
+//                    }) {
+//                        Image("BookmarkIcon")
+//                    }
                 }
             }
             .padding(10)
