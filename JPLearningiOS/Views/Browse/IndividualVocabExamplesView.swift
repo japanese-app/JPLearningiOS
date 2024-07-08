@@ -17,7 +17,7 @@ struct IndividualVocabExamplesView: View {
         VStack (alignment: .leading, spacing: 15) {
             VocabExamplesPicker(exampleSelected: $exampleSelected)
             if exampleSelected == "MyList" {
-                
+                ExampleMyListView()
             } else {
                 ExampleView(exampleSelected: $exampleSelected)
                 ExampleContextView()
@@ -170,7 +170,6 @@ struct ExampleAdditionalLearningView: View {
                 AdditionalLearningPopup()
                     .presentationDragIndicator(.hidden)
             }
-            
         }
     }
 }
@@ -222,6 +221,165 @@ struct AdditionalLearningPopup: View {
         }
         .padding(.horizontal, 30)
         .background(Color("background-grey"))
+    }
+}
+
+struct ExampleMyListView: View {
+    @State private var showCreateSentence = false
+    
+    var body: some View {
+        VStack (alignment: .leading, spacing: 10) {
+            Text("Your own sentences")
+                .font(.system(size: 14))
+                .fontWeight(.bold)
+                .foregroundColor(Color("primary-blue"))
+            ZStack {
+                Color("background-grey")
+                Button(action: {
+                    showCreateSentence.toggle()
+                }) {
+                    HStack (spacing: 8) {
+                        Text("Create a new sentence")
+                            .font(.system(size: 14))
+                            .foregroundColor(Color("icon-primary"))
+                        Image("AddIcon")
+                    }.padding(10)
+                }
+            }
+            .cornerRadius(5)
+            .fixedSize(horizontal: false, vertical: true)
+            YourExampleView()
+            
+        }
+        .sheet(isPresented: $showCreateSentence) {
+            NewSentencePopup(showCreateSentence: $showCreateSentence)
+                .presentationDragIndicator(.hidden)
+                .presentationDetents([.fraction(0.72)])
+        }
+    }
+}
+
+struct NewSentencePopup: View {
+    @Binding var showCreateSentence: Bool
+    @State private var jpSentence: String = ""
+    @State private var translation: String = ""
+    @State private var context: String = ""
+    @State private var note: String = ""
+    @State var saveClicked: Bool = false
+    
+    var body: some View {
+        ZStack (alignment: .topLeading) {
+            HStack (alignment: .top) {
+                Spacer()
+                Button(action: {
+                    showCreateSentence = false
+                }) {
+                    Image("XmarkIcon")
+                        .resizable()
+                        .frame(width: 28, height: 28)
+                }
+            }
+            
+            VStack (alignment: .leading, spacing: 15) {
+                Text("Create a new sentence")
+                    .font(.system(size: 17))
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color("primary-blue"))
+                    .padding(.bottom, 5)
+                VStack (alignment: .leading, spacing: 5) {
+                    Text("Japanese Sentence*")
+                        .font(.system(size: 15))
+                        .fontWeight(.semibold)
+                    TextField(
+                        "",
+                        text: $jpSentence
+                    )
+                    .font(.system(size: 15))
+                    .disableAutocorrection(true)
+                }
+                
+                VStack (alignment: .leading, spacing: 5) {
+                    Text("Translation")
+                        .font(.system(size: 15))
+                        .fontWeight(.semibold)
+                    TextField(
+                        "",
+                        text: $translation
+                    )
+                    .font(.system(size: 15))
+                    .disableAutocorrection(true)
+                }
+                
+                VStack (alignment: .leading, spacing: 5) {
+                    Text("Context")
+                        .font(.system(size: 15))
+                        .fontWeight(.semibold)
+                    TextField(
+                        "",
+                        text: $context
+                    )
+                    .font(.system(size: 15))
+                    .disableAutocorrection(true)
+                }
+                
+                VStack (alignment: .leading, spacing: 5) {
+                    Text("Note")
+                        .font(.system(size: 15))
+                        .fontWeight(.semibold)
+                    TextField(
+                        "",
+                        text: $note
+                    )
+                    .font(.system(size: 15))
+                    .disableAutocorrection(true)
+                }
+                
+                Button(action: {
+                    // Action for Furigana button
+                    saveClicked.toggle()
+                }) {
+                    Text("Save")
+                        .font(.system(size: 15))
+                        .foregroundColor(Color("primary-purple"))
+                        .padding(.vertical, 5)
+                        .padding(.horizontal, 15)
+                        .background(
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke(Color("primary-purple"), lineWidth: 0.8)
+                                .fill(Color("primary-purple").opacity(0.06))
+                        )
+                }
+                
+                Spacer()
+            }.textFieldStyle(.roundedBorder)
+        }
+        .padding(.vertical, 25)
+        .padding(.horizontal, 30)
+    }
+}
+
+struct YourExampleView: View {
+    var body: some View {
+        ZStack {
+            Color("background-grey")
+            
+            VStack (alignment: .center, spacing: 5) {
+                VStack (alignment: .leading, spacing: 10) {
+                    Text("円安の影響か分からんけど、こんなたくさんの外国人観光客見たことがない。")
+                        .font(.system(size: 15))
+                    Text("I’m not sure if it’s because of the yen's depreciation, but I’ve never seen so many foreign tourists. ")
+                        .font(.system(size: 14))
+                }
+                Button(action: {
+                    
+                }) {
+                    Image("EditIcon")
+                }
+            }
+            .padding(10)
+        }
+        .cornerRadius(5)
+        .fixedSize(horizontal: false, vertical: true)
     }
 }
 

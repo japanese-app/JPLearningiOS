@@ -10,7 +10,7 @@ import SwiftUI
 struct IndividualVocabView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showSettings = false
-    @State var displayOption: String = "Examples"
+    @State var displayOption: String = "Details"
 
     var body: some View {
         VStack (spacing: 0) {
